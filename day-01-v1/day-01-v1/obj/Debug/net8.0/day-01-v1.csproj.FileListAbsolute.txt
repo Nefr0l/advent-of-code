@@ -1,0 +1,14 @@
+/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/bin/Debug/net8.0/day-01-v1
+/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/bin/Debug/net8.0/day-01-v1.deps.json
+/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/bin/Debug/net8.0/day-01-v1.runtimeconfig.json
+/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/bin/Debug/net8.0/day-01-v1.dll
+/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/bin/Debug/net8.0/day-01-v1.pdb
+/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/obj/Debug/net8.0/day-01-v1.GeneratedMSBuildEditorConfig.editorconfig
+/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/obj/Debug/net8.0/day-01-v1.AssemblyInfoInputs.cache
+/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/obj/Debug/net8.0/day-01-v1.AssemblyInfo.cs
+/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/obj/Debug/net8.0/day-01-v1.csproj.CoreCompileInputs.cache
+/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/obj/Debug/net8.0/day-01-v1.dll
+/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/obj/Debug/net8.0/refint/day-01-v1.dll
+/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/obj/Debug/net8.0/day-01-v1.pdb
+/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/obj/Debug/net8.0/day-01-v1.genruntimeconfig.cache
+/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/obj/Debug/net8.0/ref/day-01-v1.dll
