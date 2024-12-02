@@ -7,8 +7,7 @@ internal class Program
         string path = "/ssd1/my-stuff/aoc-2024/day-01-v2/day-01-v2/data.txt";
         string[] lines = File.ReadAllLines(path);
         
-        List<int> left = new List<int>();
-        List<int> right = new List<int>();
+        List<int> left = new(), right = new();
         
         foreach (var l in lines)
         {
@@ -19,26 +18,21 @@ internal class Program
         left.Sort();
         right.Sort();
 
-        int sum = 0;
-        int leftIterator = 0;
-        int rightIterator = 0;
-
+        int sum = 0, leftIterator = 0, rightIterator = 0;
         while (leftIterator < left.Count && rightIterator < right.Count)
         {
             if (left[leftIterator] == right[rightIterator])
             {
                 sum += left[leftIterator];
             }
-            else
+            else if (left[leftIterator] <= right[rightIterator])
             {
-                if (left[leftIterator] <= right[rightIterator])
-                {
-                    leftIterator++;
-                    continue;
-                }
+                leftIterator++;
+                continue;
             }
             rightIterator++;
         }
+        
         Console.WriteLine(sum);
     }
 }
