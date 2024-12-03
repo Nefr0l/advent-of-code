@@ -37,4 +37,15 @@ public class Helper
 
         return finalList;
     }
+
+    public static List<string> GetStringArray(string filePath)
+    {
+        List<string> lines = File.ReadAllLines(filePath).ToList();
+        return lines;
+    }
+    
+    public static string GetString(string filePath)
+    {
+        return File.ReadAllText(filePath);
+    }
 }
