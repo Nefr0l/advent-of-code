@@ -44,4 +44,35 @@ public class Day04
         
         Console.WriteLine(sum);
     }
+    
+    public static void GetAnswerPartTwo()
+    {
+        var lines = Helper.GetStringArray("../../../Data/Day04.txt");
+        int sum = 0;
+        
+        List<string> words = new List<string>() { "MAS", "SAM" };
+        
+        for (int i = 0; i < lines.Count; i++)
+        {
+            for (int j = 0; j < lines[i].Length; j++)
+            {
+                foreach (var w in words)
+                {
+                    if ((i + 2 < lines.Count && j + 2 < lines[i].Length) && lines[i][j] == w[0])
+                    {
+                        if (lines[i + 1][j + 1] == w[1] && lines[i + 2][j + 2] == w[2])
+                        {
+                            if ((lines[i][j + 2] == w[0] && lines[i + 2][j] == w[2]) 
+                                || (lines[i][j + 2] == w[2] && lines[i + 2][j] == w[0]))
+                            {
+                                sum++;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        Console.WriteLine(sum);
+    }
 }

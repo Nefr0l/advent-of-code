@@ -6,6 +6,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        Day04.GetAnswer();
+        Day04.GetAnswerPartTwo();
     }
 }
