@@ -4,7 +4,7 @@ public class Day02
 {
     public static void GetAnswer()
     {
-        List<List<int>> Matrix = Helper.GetMatrix("../../../Data/Day02.txt");
+        List<List<int>> Matrix = Helper.GetMatrix("../../../Day02/Day02.txt");
 
         int sum = 0;
         bool isTrue;

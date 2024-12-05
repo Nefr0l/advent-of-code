@@ -47,7 +47,7 @@ public class Day04
     
     public static void GetAnswerPartTwo()
     {
-        var lines = Helper.GetStringArray("../../../Data/Day04.txt");
+        var lines = Helper.GetStringArray("../../../Day04/Day04.txt");
         int sum = 0;
         
         List<string> words = new List<string>() { "MAS", "SAM" };

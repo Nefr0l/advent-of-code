@@ -6,7 +6,7 @@ public class Day03
 {
     public static void GetAnswer()
     {
-        var text = Helper.GetString("../../../Data/TestData.txt");
+        var text = Helper.GetString("../../../Day03/Day03.txt");
         
         var mulsMatches = Regex.Matches(text, "mul\\(\\d+,\\d+\\)");
         var muls = mulsMatches.Select(m => m.Value).ToList();
