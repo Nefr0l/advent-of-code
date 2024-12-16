@@ -44,6 +44,19 @@ public class Helper
         return lines;
     }
     
+    public static List<List<char>> GetCharMatrix(string filePath)
+    {
+        List<string> lines = File.ReadAllLines(filePath).ToList();
+        List<List<char>> temp = new List<List<char>>();
+
+        foreach (var t in lines)
+        {
+            temp.Add(t.ToCharArray().ToList());
+        }
+
+        return temp;
+    }
+    
     public static string GetString(string filePath)
     {
         return File.ReadAllText(filePath);

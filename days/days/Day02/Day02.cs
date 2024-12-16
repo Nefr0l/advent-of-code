@@ -1,4 +1,4 @@
-namespace days.Days;
+namespace days;
 
 public class Day02
 {

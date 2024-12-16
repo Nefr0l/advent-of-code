@@ -1,6 +1,6 @@
-﻿namespace day01;
+﻿namespace days;
 
-internal class Program
+public class Day01_1
 {
     /*
      * 1. Stworzyć dwie listy liczb
@@ -8,10 +8,10 @@ internal class Program
      * 3. Dodać różnice między liczbami po kolei
      */
     
-    static void Main()
+    public static void GetAnswer()
     {
         int sum = 0;
-        string path = @"/ssd1/my-stuff/aoc-2024/day-01-v1/day-01-v1/data.txt";
+        string path = @"../../../Day01/Day01.txt";
         string[] lines = File.ReadAllLines(path);
         
         List<string> left = new List<string>();

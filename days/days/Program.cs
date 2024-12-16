@@ -1,11 +1,9 @@
-﻿using days.Days;
-
-namespace days;
+﻿namespace days;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Day05.Day05.GetAnswer();
+        Day06_2.GetAnswer();
     }
 }

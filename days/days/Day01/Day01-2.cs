@@ -1,10 +1,10 @@
-﻿namespace day_01_v2;
+﻿namespace days;
 
-internal class Program
+public class Day01_2
 {
-    static void Main(string[] args)
+    public static void GetAnswer()
     {
-        string path = "/ssd1/my-stuff/aoc-2024/day-01-v2/day-01-v2/data.txt";
+        string path = "../../../Day01/Day01.txt";
         string[] lines = File.ReadAllLines(path);
         
         List<int> left = new(), right = new();

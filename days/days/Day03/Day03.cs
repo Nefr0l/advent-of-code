@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace days.Days;
+namespace days;
 
 public class Day03
 {
