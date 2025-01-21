@@ -2,8 +2,8 @@ namespace days;
 
 public class Day07
 {
-    private static Dictionary<long, List<long>> Data = [];
-    private static long sum = 0, count = 0;
+    private static Dictionary<nuint, List<nuint>> Data = [];
+    private static nuint sum = 0, count = 0;
     
     public static void GetAnswer()
     {
@@ -11,40 +11,46 @@ public class Day07
 
         foreach (var d in Data)
         {
-            int possibilities = int.Parse(Math.Pow(2, d.Value.Count - 1).ToString());
-            Console.WriteLine("Possibilities: " + possibilities);
-
-            bool isPossible = IsPossible(1, d.Value.Count - 1, d.Value, d.Key);
-            Console.WriteLine(isPossible);
+            bool isPossible = IsPossible(1, d.Value.Count-1, d.Value, d.Key);
+            
+            //Console.WriteLine("");
+            //Console.WriteLine(isPossible);
 
             if (isPossible)
             {
                 count++;
                 sum += d.Key;
             }
+            
+            Console.WriteLine(d.Key + " |  Sum: " + sum + " | Added: " + isPossible);
         }
         
         Console.WriteLine(count);
         Console.WriteLine(sum);
     }
 
-    public static bool IsPossible(int n, int slots, List<long> numbers, long finalNumber)
+    public static bool IsPossible(long n, long slots, List<nuint> numbers, nuint finalNumber)
     {
         if (n > slots)
             return false;
         
-        if (numbers[0] * numbers[1] == finalNumber || numbers[0] + numbers[1] == finalNumber)
+        if (((numbers[0] * numbers[1] == finalNumber) || (numbers[0] + numbers[1] == finalNumber) || (nuint.Parse(numbers[0] + numbers[1].ToString()) == finalNumber)) && n == slots)
             return true;
 
-        List<long> foo = numbers.ToList();
+        List<nuint> foo = numbers.ToList();
         foo[0] *= foo[1];
         foo.RemoveAt(1);
         
-        List<long> foo2 = numbers.ToList();
+        List<nuint> foo2 = numbers.ToList();
         foo2[0] += foo2[1];
         foo2.RemoveAt(1);
+
+        List<nuint> foo3 = numbers.ToList();
+        foo3[0] = nuint.Parse(foo3[0] + foo3[1].ToString());
+        foo3.RemoveAt(1);
+        //Console.Write(foo3[0] + ", ");
         
-        return IsPossible(n + 1, slots, foo2, finalNumber) || IsPossible(n + 1, slots, foo, finalNumber);
+        return IsPossible(n + 1, slots, foo2, finalNumber) || IsPossible(n + 1, slots, foo, finalNumber) || IsPossible(n+1, slots, foo3, finalNumber);
     }
 
     public static void GetData()
@@ -54,22 +60,16 @@ public class Day07
         
         foreach (var t in temp)
         {
-            long key = 0;
+            nuint key = 0;
             List<string> values = [];
-            List<long> intValues = [];
+            List<nuint> intValues = [];
 
             int separatorIndex = t.IndexOf(':');
-            key = long.Parse(t.Substring(0, separatorIndex));
+            key = nuint.Parse(t.Substring(0, separatorIndex));
             values = t.Substring(separatorIndex + 2).Split(' ').ToList();
-            intValues.AddRange(values.Select(long.Parse));
+            intValues.AddRange(values.Select(nuint.Parse));
             
             Data.Add(key, intValues);
-            
-            /* Debug only
-             Console.Write($"Added new record. Key: {key} |");
-            foreach (var i in intValues) Console.Write(" " + i);
-            Console.WriteLine("");
-            */
         }
     }
 }
