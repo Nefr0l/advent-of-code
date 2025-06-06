@@ -2,6 +2,8 @@
 
 namespace advent;
 
+// paths in other files are broken btw
+
 internal class Program
 {
     static void Main(string[] args)

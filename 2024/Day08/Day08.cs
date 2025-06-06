@@ -14,7 +14,7 @@ public class Day08
      * */
 
     private static Dictionary<char, AntennaType> Antennas = [];
-    private static List<List<char>> Data = Helper.GetCharMatrix("../../../Day08/Data.txt");
+    private static List<List<char>> Data = Helper.GetCharMatrix("../../../2024/Day08/Data.txt");
     //private static List<List<char>> Data = Helper.GetCharMatrix("../../../TestData.txt");
     private static int sum = 0;
     
